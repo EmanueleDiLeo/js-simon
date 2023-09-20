@@ -1,0 +1,25 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+  width: 600px;
+}
+
+h1{
+  padding: 20px;
+  text-align: center;
+}
+
+ul{
+  font-size: 1.3rem;
+  padding-top: 20px;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+
+}
