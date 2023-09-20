@@ -14,8 +14,8 @@ function random(){
     checkRandom = Math.ceil(Math.random() * 100);
 
     if(!(nRandom.includes(checkRandom))){
-      nRandom.push(Math.ceil(Math.random() * 100));
-      list.innerHTML += `<li>${nRandom[i]}</li>`;
+      nRandom.push(checkRandom);
+      list.innerHTML += `<li>${nRandom[counter]}</li>`;
       counter++
     }
 
