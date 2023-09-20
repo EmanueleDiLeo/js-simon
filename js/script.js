@@ -7,10 +7,20 @@ setTimeout(time,5020);
 
 function random(){
   let nRandom = [];
-  for(let i = 0; i < 5; i++){
-    nRandom.push(Math.ceil(Math.random() * 100));
-    list.innerHTML += `<li>${nRandom[i]}</li>`;
-  }
+  let checkRandom;
+  let counter = 0;
+  do{
+
+    checkRandom = Math.ceil(Math.random() * 100);
+
+    if(!(nRandom.includes(checkRandom))){
+      nRandom.push(Math.ceil(Math.random() * 100));
+      list.innerHTML += `<li>${nRandom[i]}</li>`;
+      counter++
+    }
+
+  }while(counter < 5);
+  
   return nRandom;
 }
 
@@ -32,10 +42,14 @@ function prompts(){
 
 function check(){
   let count = 0;
+  let double = []; 
   for(let i = 0; i < 5; i++){
     if(nRandom.includes(listPrompt[i])){
-      list.innerHTML += `<li>${listPrompt[i]}</li>`;
-      count ++;
+      if( !(double.includes(listPrompt[i])) ){
+        double.push(listPrompt[i]);
+        list.innerHTML += `<li>${listPrompt[i]}</li>`;
+        count ++;
+      }
     }
   }
   message.innerHTML = "Hai indovinato " + count + " numeri su 5";
